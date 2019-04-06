@@ -6,6 +6,12 @@ view: recommendations_real_time {
     sql: ${TABLE}.customer_id ;;
   }
 
+  measure: count_distinctcustomer_id {
+    type: count_distinct
+    # hidden: yes
+    sql: ${TABLE}.customer_id ;;
+  }
+
   dimension: products {
     type: string
     sql: ${TABLE}.Products ;;
